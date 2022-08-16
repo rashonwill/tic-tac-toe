@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+  
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: "Potta One";
+  background: linear-gradient(darkblue,grey, whitesmoke);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+header{
+  top: 0;
+  margin: 5px;
+  width: 50vw;
+  color: black;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 5px solid black;
+  padding: 15px;
+  font-size: 40px;
+ 
+}
+
+.yourTurn{
+  border-bottom: 4px solid darkgreen;
+}
+
+.board {
+  margin-top: 60px;
+  width: 360px;
+  height: 360px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "Permanent Marker";
+  font-size: 48px;
+}
+
+.cell {
+  flex: 0 0 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell:hover{
+  opacity: .5;
+}
+
+.border-left-right {
+   border-left: 5px solid black;
+    border-right: 5px solid black;
+}
+
+.border-top-bottom {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+
+.cell span {
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.messages{
+  position: absolute;
+  margin-top: 50px;
+  margin: 1rem auto;
+  width: 650px;
+  height: 300px;
+  background: black;
+  opacity: .8;
+  z-index: 10;
+  border-radius: 15px;
+  transform: scale(0);
+  transition: 200ms ease-in-out;
+}
+
+.messages.active{
+  transform:scale(1);
+}
+
+h1{
+  margin-top: 50px;
+  color: whitesmoke;
+  text-align: center;
+  font-family: "Permanent Marker";
+  font-weight: bold;
+  font-size: 60px;
+}
+
+h1:hover{
+  color: darkblue;
+}
+
+#newgame{
+  display: block;
+  margin: 1rem auto;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  border: 4px solid whitesmoke;
+  background: black;
+  color:white;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 1;
+  padding: 5px;
+}
+
+#newgame:hover{
+  transform: scale(1.10);
+  background: darkblue;
+}
+
+.gamerules{
+  width: 800px;
+  height: 400px;
+  background: rgba(19, 19, 19, .9);
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  padding: 5px;
+  border-radius: 5px;
+  transform: scale(0);
+}
+
+.gamerules p{
+  color: white;
+  font-size: 20px;
+}
+
+.gamerules.inactive{
+  transform: scale(0);
+}
+
+.btn{
+text-align: center;
+background-color: transparent;
+border: 5px solid darkblue;
+color: white;
+font-weight: bold;
+padding:  5px;
+font-size: 18px;
+cursor: pointer;
+text-shadow: 0px 4px Black;
+background-position:center;
+background-repeat:no-repeat;
+height: 45px;
+width: 150px;
+margin-top: 20px;
+border-radius: 10px;
+display: block;
+margin: 1rem auto;
+margin-top: 50px;
+  
+}
+
+.btn:hover{
+  transform:scale(1.08);
+  background: darkblue;
+}
