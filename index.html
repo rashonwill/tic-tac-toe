@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Tic-Tac-Toe</title>
+<link rel="stylesheet" href="index.css" />
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script defer src="index.js"></script>
+</head>
+<header>
+    <h3 class="player1" > Player 1 </h3>
+    <h3 class="player2"> Player 2 </h3>
+    </header>
+
+
+<body>
+    
+  <div class="board">
+    <div class="cell empty" id="sqr1"><span></span></div>
+    <div class="cell empty border-left-right" id="sqr2"><span></span></div>
+    <div class="cell empty" id="sqr3"><span></span></div>
+    <div class="cell empty border-top-bottom" id="sqr4"><span></span></div>
+    <div class="cell empty border-left-right border-top-bottom" id="sqr5"><span></span></div>
+    <div class="cell empty border-top-bottom" id="sqr6"><span></span></div>
+    <div class="cell empty" id="sqr7"><span></span></div>
+    <div class="cell empty border-left-right" id="sqr8"><span></span></div>
+    <div class="cell empty" id="sqr9" ><span></span></div>
+  </div>
+  
+  <div class="messages">
+    <div id="status"></div>
+    <h1></h1>
+    <button id ="newgame" class="new">New Game</button>
+     <button id ="newgame" class="exit" >Exit</button>
+    
+    
+  </div>
+</body>
+
+<div class="gamerules">
+  <h1> GAME RULES </h1>
+  <p> TIC TAC TOE THREE IN A ROW:
+  The player who succeeds in placing three of their marks in a diagonal, horizontal, or vertical row is the winner.
+  </p>
+
+<button id="play" class ="btn"> Let's Play </button>
+
+  
+  
+</div>
+
+</html>
