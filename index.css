@@ -34,7 +34,8 @@ header{
 }
 
 .yourTurn{
-  border-bottom: 4px solid darkgreen;
+  border-bottom: 4px solid green;
+  color: green;
 }
 
 .board {
