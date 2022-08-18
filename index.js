@@ -16,6 +16,8 @@ $(".cell").click(function boardSelection() {
     setTimeout(() => {
       getNum();
     }, "1500");
+  }else{
+  winnerCheck();
   }
 });
 
@@ -76,6 +78,8 @@ function computerMove(num) {
     $(".player1").addClass("yourTurn");
   } else if ($(".cell").hasClass("taken")) {
     getNum();
+  }else{
+  winnerCheck();
   }
 }
 
