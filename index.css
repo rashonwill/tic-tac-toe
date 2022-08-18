@@ -86,8 +86,7 @@ header{
   margin: 1rem auto;
   width: 650px;
   height: 300px;
-  background: black;
-  opacity: .8;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 10;
   border-radius: 15px;
   transform: scale(0);
@@ -114,16 +113,18 @@ h1:hover{
 #newgame{
   display: block;
   margin: 1rem auto;
-  width: 120px;
-  height: 40px;
-  border-radius: 10px;
-  border: 4px solid whitesmoke;
-  background: black;
-  color:white;
+  width: 8rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 20px;
+  background: background: rgba(0, 0, 0, 0.8);
+  color: white;
   font-size: 18px;
   font-weight: bold;
   opacity: 1;
   padding: 5px;
+  cursor: pointer;
+  box-shadow: inset 2px 2px 4px #6a6a6a, inset -2px -2px 4px #050606;
 }
 
 #newgame:hover{
@@ -134,7 +135,7 @@ h1:hover{
 .gamerules{
   width: 800px;
   height: 400px;
-  background: rgba(19, 19, 19, .9);
+  background: background: rgba(0, 0, 0, 0.8);
   text-align: center;
   position: absolute;
   top: 30%;
@@ -155,23 +156,20 @@ h1:hover{
 
 .btn{
 text-align: center;
-background-color: transparent;
-border: 5px solid darkblue;
+background-color: rgba(0, 0, 0, 0.8);
+border:none;
 color: white;
 font-weight: bold;
-padding:  5px;
+padding:  10px;
 font-size: 18px;
 cursor: pointer;
-text-shadow: 0px 4px Black;
-background-position:center;
-background-repeat:no-repeat;
-height: 45px;
-width: 150px;
-margin-top: 20px;
-border-radius: 10px;
+height: 2rem;
+width: 8rem;
+border-radius: 20px;
 display: block;
 margin: 1rem auto;
 margin-top: 50px;
+box-shadow: inset 2px 2px 4px #6a6a6a, inset -2px -2px 4px #050606; 
   
 }
 
