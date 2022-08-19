@@ -5,7 +5,7 @@ let play = true;
 })();
 
 $(".cell").click(function boardSelection() {
-  if (play) {
+ if(play) {
     let selected = $(this).closest(".cell");
     selected.text("X");
     selected.css("pointer-events", "none");
@@ -16,8 +16,8 @@ $(".cell").click(function boardSelection() {
     setTimeout(() => {
       getNum();
     }, "1500");
-  }else{
-  winnerCheck();
+  }else if(!play){
+    winnerCheck();
   }
 });
 
@@ -28,66 +28,74 @@ function computerMove(num) {
     $("#sqr1").addClass("taken");
     $(".player2").removeClass("yourTurn");
     $(".player1").addClass("yourTurn");
+    winnerCheck();
   } else if (num === 2 && !$("#sqr2").hasClass("taken") && play) {
     $("#sqr2").text("O");
     $("#sqr2").css("pointer-events", "none");
     $("#sqr2").addClass("taken");
     $(".player2").removeClass("yourTurn");
     $(".player1").addClass("yourTurn");
+    winnerCheck();
   } else if (num === 3 && !$("#sqr3").hasClass("taken") && play) {
     $("#sqr3").text("O");
     $("#sqr3").css("pointer-events", "none");
     $("#sqr3").addClass("taken");
     $(".player2").removeClass("yourTurn");
     $(".player1").addClass("yourTurn");
+    winnerCheck();
   } else if (num === 4 && !$("#sqr4").hasClass("taken") && play) {
     $("#sqr4").text("O");
     $("#sqr4").css("pointer-events", "none");
     $("#sqr4").addClass("taken");
     $(".player2").removeClass("yourTurn");
     $(".player1").addClass("yourTurn");
+    winnerCheck();
   } else if (num === 5 && !$("#sqr5").hasClass("taken") && play) {
     $("#sqr5").text("O");
     $("#sqr5").css("pointer-events", "none");
     $("#sqr5").addClass("taken");
     $(".player2").removeClass("yourTurn");
     $(".player1").addClass("yourTurn");
+    winnerCheck();
   } else if (num === 6 && !$("#sqr6").hasClass("taken") && play) {
     $("#sqr6").text("O");
     $("#sqr6").css("pointer-events", "none");
     $("#sqr6").addClass("taken");
     $(".player2").removeClass("yourTurn");
     $(".player1").addClass("yourTurn");
+    winnerCheck();
   } else if (num === 7 && !$("#sqr7").hasClass("taken") && play) {
     $("#sqr7").text("O");
     $("#sqr7").css("pointer-events", "none");
     $("#sqr7").addClass("taken");
     $(".player2").removeClass("yourTurn");
     $(".player1").addClass("yourTurn");
+    winnerCheck();
   } else if (num === 8 && !$("#sqr8").hasClass("taken") && play) {
     $("#sqr8").text("O");
     $("#sqr8").css("pointer-events", "none");
     $("#sqr8").addClass("taken");
     $(".player2").removeClass("yourTurn");
     $(".player1").addClass("yourTurn");
+    winnerCheck();
   } else if (num === 9 && !$("#sqr9").hasClass("taken") && play) {
     $("#sqr9").text("O");
     $("#sqr9").css("pointer-events", "none");
     $("#sqr9").addClass("taken");
     $(".player2").removeClass("yourTurn");
     $(".player1").addClass("yourTurn");
-  } else if ($(".cell").hasClass("taken")) {
+    winnerCheck();
+  } else if ($(".cell").hasClass("taken") && play) {
     getNum();
-  }else{
-  winnerCheck();
   }
 }
 
 function getNum() {
   let num = Math.floor(Math.random() * 9) + 1;
   computerMove(num);
-  winnerCheck();
 }
+
+
 
 function winnerCheck() {
   if (
